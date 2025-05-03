@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userId": "user",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "1234",
+      "bikeNumber": "UP32BK1234",
+      "carNumber": "UP32CR5678"
+    },
+    {
+      "id": "3781",
+      "userId": "user10",
+      "email": "user10@gmail.com",
+      "password": "user10",
+      "bikeNumber": "UP32BK1010",
+      "carNumber": "UP32CR1010"
+    },
+    {
+      "id": "59d4",
+      "userId": "user44",
+      "email": "test1@gmail.com",
+      "password": "user44",
+      "bikeNumber": "",
+      "carNumber": "kl-1001"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org1",
+      "name": "City Parking A",
+      "country": "India",
+      "state": "Uttar Pradesh",
+      "city": "Lucknow"
+    },
+    {
+      "id": "org2",
+      "name": "Mall Parking B",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Mumbai"
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot1",
+      "slotNumber": "A1",
+      "type": "car",
+      "booked": true,
+      "levelId": "org1"
+    },
+    {
+      "id": "slot2",
+      "slotNumber": "A2",
+      "type": "bike",
+      "booked": true,
+      "levelId": "org1"
+    },
+    {
+      "id": "slot3",
+      "slotNumber": "A3",
+      "type": "car",
+      "booked": true,
+      "levelId": "org2"
+    },
+    {
+      "id": "slot4",
+      "slotNumber": "A4",
+      "type": "bike",
+      "booked": false,
+      "levelId": "org2"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b1",
+      "userId": "user",
+      "slotNumber": "A3",
+      "type": "car",
+      "amount": 50,
+      "date": "2024-05-01T10:00:00.000Z"
+    }
+  ],
+  "wallets": [
+    {
+      "id": "user",
+      "userId": "user",
+      "balance": 1000
+    },
+    {
+      "id": "user10",
+      "userId": "user10",
+      "balance": 500
+    },
+    {
+      "id": "user44",
+      "userId": "user44",
+      "balance": 210
+    },
+    {
+      "id": "user1",
+      "userId": "user1",
+      "balance": 100
+    }
+  ]
+}

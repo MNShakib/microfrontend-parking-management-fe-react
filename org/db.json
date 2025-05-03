@@ -1,0 +1,700 @@
+{
+  "organizations": [
+    {
+      "id": "1",
+      "name": "Tech Park A",
+      "orgId": "techpark01",
+      "password": "pass123",
+      "country": "India",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "address": "123 MG Road"
+    },
+    {
+      "id": "2488",
+      "name": "ust",
+      "orgId": "ust_trv",
+      "password": "ust_trv",
+      "country": "India",
+      "state": "Kerala",
+      "city": "Trivandrum",
+      "address": "c-122"
+    }
+  ],
+  "levels": [
+    {
+      "id": "1",
+      "name": "Level 1"
+    },
+    {
+      "id": "2",
+      "name": "Level 2"
+    },
+    {
+      "id": "026e",
+      "name": "Level 3"
+    },
+    {
+      "id": "47aa",
+      "name": "Level 4"
+    }
+  ],
+  "slots": [
+    {
+      "id": "1",
+      "levelId": 1,
+      "type": "car",
+      "booked": true
+    },
+    {
+      "id": "2",
+      "levelId": 1,
+      "type": "bike",
+      "booked": false
+    },
+    {
+      "id": "3",
+      "levelId": 1,
+      "type": "car",
+      "booked": true
+    },
+    {
+      "id": "4",
+      "levelId": 2,
+      "type": "bike",
+      "booked": false
+    },
+    {
+      "id": "5",
+      "levelId": 2,
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "6",
+      "levelId": 2,
+      "type": "bike",
+      "booked": true
+    },
+    {
+      "id": "503a",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "64bc",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "3b65",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "c1d3",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "5154",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "e51a",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "a4cc",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "328c",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "4fd8",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "5395",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "adf0",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "babb",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "c23f",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "1498",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "c226",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "ec37",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "1521",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "0edf",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "f113",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "f2f6",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "25c7",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "9a16",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "678d",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "f8f6",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "4c3c",
+      "levelId": "",
+      "type": "car",
+      "booked": false
+    },
+    {
+      "id": "7172",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-1"
+    },
+    {
+      "id": "0b60",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-2"
+    },
+    {
+      "id": "4692",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-3"
+    },
+    {
+      "id": "725d",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-4"
+    },
+    {
+      "id": "9bf5",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-5"
+    },
+    {
+      "id": "375c",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-6"
+    },
+    {
+      "id": "bebb",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-7"
+    },
+    {
+      "id": "8365",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-8"
+    },
+    {
+      "id": "da8f",
+      "levelId": "026e",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "Level 3-9"
+    },
+    {
+      "id": "6bda",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A3"
+    },
+    {
+      "id": "2b0d",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A4"
+    },
+    {
+      "id": "9aaf",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A5"
+    },
+    {
+      "id": "de96",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A6"
+    },
+    {
+      "id": "a906",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A7"
+    },
+    {
+      "id": "a3a2",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A8"
+    },
+    {
+      "id": "888c",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A9"
+    },
+    {
+      "id": "ea54",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A10"
+    },
+    {
+      "id": "5b21",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A1"
+    },
+    {
+      "id": "103c",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A2"
+    },
+    {
+      "id": "87f8",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A3"
+    },
+    {
+      "id": "c872",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A4"
+    },
+    {
+      "id": "f1bc",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A5"
+    },
+    {
+      "id": "103f",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A6"
+    },
+    {
+      "id": "ab3c",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A7"
+    },
+    {
+      "id": "0362",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A8"
+    },
+    {
+      "id": "4daa",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A9"
+    },
+    {
+      "id": "09cd",
+      "levelId": "1",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "A11"
+    },
+    {
+      "id": "e519",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B1"
+    },
+    {
+      "id": "65f4",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B2"
+    },
+    {
+      "id": "03ba",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B3"
+    },
+    {
+      "id": "b4aa",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B4"
+    },
+    {
+      "id": "1652",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B5"
+    },
+    {
+      "id": "9d47",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B6"
+    },
+    {
+      "id": "4efa",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B7"
+    },
+    {
+      "id": "0561",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B8"
+    },
+    {
+      "id": "7c80",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B9"
+    },
+    {
+      "id": "1fd2",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B10"
+    },
+    {
+      "id": "2b57",
+      "levelId": "2",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "B11"
+    },
+    {
+      "id": "e956",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B1"
+    },
+    {
+      "id": "703a",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B2"
+    },
+    {
+      "id": "bcd4",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B3"
+    },
+    {
+      "id": "f85e",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B4"
+    },
+    {
+      "id": "ff58",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B5"
+    },
+    {
+      "id": "a30c",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B6"
+    },
+    {
+      "id": "04ea",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B7"
+    },
+    {
+      "id": "4559",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B8"
+    },
+    {
+      "id": "512a",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B10"
+    },
+    {
+      "id": "4152",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B11"
+    },
+    {
+      "id": "f542",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B12"
+    },
+    {
+      "id": "2a37",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B13"
+    },
+    {
+      "id": "d479",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B14"
+    },
+    {
+      "id": "a822",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B15"
+    },
+    {
+      "id": "ad3f",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B16"
+    },
+    {
+      "id": "f8f5",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B18"
+    },
+    {
+      "id": "a953",
+      "levelId": "2",
+      "type": "bike",
+      "booked": false,
+      "slotNumber": "B19"
+    },
+    {
+      "id": "aff6",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A11"
+    },
+    {
+      "id": "feee",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A12"
+    },
+    {
+      "id": "1cfe",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A11"
+    },
+    {
+      "id": "322e",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A12"
+    },
+    {
+      "id": "c591",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A13"
+    },
+    {
+      "id": "1f5f",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A14"
+    },
+    {
+      "id": "33f7",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A15"
+    },
+    {
+      "id": "e637",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A16"
+    },
+    {
+      "id": "b5b8",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A17"
+    },
+    {
+      "id": "b737",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A18"
+    },
+    {
+      "id": "f0f0",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A19"
+    },
+    {
+      "id": "a0a8",
+      "levelId": "1",
+      "type": "car",
+      "booked": false,
+      "slotNumber": "A20"
+    }
+  ],
+  "bookings": []
+}

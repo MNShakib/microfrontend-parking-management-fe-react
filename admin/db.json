@@ -1,0 +1,36 @@
+{
+  "organizations": [
+    {
+      "id": "org123",
+      "name": "ABC Org",
+      "country": "India",
+      "state": "UP",
+      "city": "Lucknow",
+      "status": "rejected"
+    },
+    {
+      "id": "org124",
+      "name": "XYZ Org",
+      "country": "USA",
+      "state": "California",
+      "city": "San Francisco",
+      "status": "approved"
+    },
+    {
+      "id": "ust_trv",
+      "name": "ust",
+      "country": "india",
+      "state": "kerala",
+      "city": "trivandrum",
+      "status": "approved"
+    },
+    {
+      "id": "emb_trv",
+      "name": "embassy",
+      "country": "india",
+      "state": "kerala",
+      "city": "trivandrum",
+      "status": "approved"
+    }
+  ]
+}
