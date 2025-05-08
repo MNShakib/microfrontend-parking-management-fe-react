@@ -1,42 +1,77 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { registerOrganization } from '../apiService';
+import '../styles//AddOrganization.css';
 
 const AddOrganization: React.FC = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    id: '',
     name: '',
-    country: '',
-    state: '',
-    city: '',
-    status: 'pending'
+    email: '',
+    password: '',
+    location: { country: '', state: '', city: '' },
   });
 
+  const [error, setError] = useState('');
+  const token = localStorage.getItem('adminToken');
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    if (['country', 'state', 'city'].includes(name)) {
+      setForm(prev => ({ ...prev, location: { ...prev.location, [name]: value } }));
+    } else {
+      setForm(prev => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await fetch('http://localhost:4003/organizations', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form)
-    });
-    navigate('/dashboard');
+    if (!token) return setError('Unauthorized. Please log in first.');
+    try {
+      await registerOrganization(token, form);
+      navigate('/dashboard');
+    } catch (error) {
+      setError('Failed to register organization.');
+    }
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Add New Organization</h2>
-      <form className="space-y-4 max-w-lg" onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Organization Name" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <input type="text" name="id" placeholder="Organization ID" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <input type="text" name="country" placeholder="Country" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <input type="text" name="state" placeholder="State" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <input type="text" name="city" placeholder="City" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <button type="submit" className="bg-blue-600 text-white py-2 px-4 rounded">Create</button>
-      </form>
+    <div className="add-org-container">
+      <div className="form-card">
+        <h2>Add New Organization</h2>
+        {error && <p className="error">{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <label>
+            Organization Name
+            <input name="name" placeholder="e.g., GreenMall" onChange={handleChange} required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="admin@example.com" onChange={handleChange} required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" placeholder="••••••••" onChange={handleChange} required />
+          </label>
+
+          <div className="grid-row">
+            <label>
+              Country
+              <input name="country" placeholder="Country" onChange={handleChange} required />
+            </label>
+            <label>
+              State
+              <input name="state" placeholder="State" onChange={handleChange} required />
+            </label>
+            <label>
+              City
+              <input name="city" placeholder="City" onChange={handleChange} required />
+            </label>
+          </div>
+
+          <button type="submit">Create Organization</button>
+        </form>
+      </div>
     </div>
   );
 };

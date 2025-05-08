@@ -1,13 +1,27 @@
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import '../styles/Sidebar.css';
 
-const Sidebar = () => (
-  <aside className="w-64 bg-blue-700 text-white h-full p-6">
-    <h2 className="text-2xl font-bold mb-8">Admin</h2>
-    <nav className="space-y-4">
-      <Link to="/dashboard" className="block hover:text-gray-200">Organizations</Link>
-      <Link to="/dashboard/add" className="block hover:text-gray-200">Add Organization</Link>
-    </nav>
-  </aside>
-);
+const Sidebar = () => {
+  const location = useLocation();
+  const [open, setOpen] = useState(true);
+
+  return (
+    <aside className={`sidebar ${open ? 'open' : 'collapsed'}`}>
+      <button className="toggle-btn" onClick={() => setOpen(!open)}>
+        {open ? '⏴' : '⏵'}
+      </button>
+      <h2 className="sidebar-title">{open ? 'Admin Panel' : 'A'}</h2>
+      <nav className="sidebar-links">
+        <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''}>
+          📄 {open && 'Organizations'}
+        </Link>
+        <Link to="/dashboard/add" className={location.pathname.includes('/add') ? 'active' : ''}>
+          ➕ {open && 'Add Organization'}
+        </Link>
+      </nav>
+    </aside>
+  );
+};
 
 export default Sidebar;

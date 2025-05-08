@@ -22,7 +22,7 @@ export default defineConfig({
   },
 
   devServer: {
-    port: 3001,
+    port: 7001,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, "src")],
   },
@@ -30,7 +30,7 @@ export default defineConfig({
     // You need to set a unique value that is not equal to other applications
     uniqueName: "admin",
     // publicPath must be configured if using manifest
-    publicPath: "http://localhost:3001/",
+    publicPath: "http://localhost:7001/",
   },
 
   experiments: {

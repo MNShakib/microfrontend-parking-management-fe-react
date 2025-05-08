@@ -1,83 +1,83 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  fetchOrganizations,
+  approveOrganization,
+  rejectOrganization,
+} from '../apiService';
+import '../styles/Organization.css';
 
-// Step 1: Define a proper TypeScript type
 type Organization = {
-  id: string;
+  _id: string;
   name: string;
-  country: string;
-  state: string;
-  city: string;
-  status: 'pending' | 'approved' | 'rejected';
+  email: string;
+  approved: boolean;
+  role: string;
+  createdAt: string;
 };
 
 const Organizations: React.FC = () => {
-  // Step 2: Use the type in useState
   const [orgs, setOrgs] = useState<Organization[]>([]);
+  const [error, setError] = useState<string>('');
+  const token = localStorage.getItem('adminToken');
 
-  // Step 3: Fetch data from json-server
   useEffect(() => {
-    fetch('http://localhost:4003/organizations')
-      .then((res) => res.json())
-      .then((data: Organization[]) => setOrgs(data))
-      .catch((err) => console.error(err));
-  }, []);
+    const loadOrganizations = async () => {
+      try {
+        if (!token) throw new Error('Unauthorized');
+        const organizations = await fetchOrganizations(token);
+        setOrgs(organizations);
+      } catch (error) {
+        setError('Failed to load organizations');
+      }
+    };
 
-  // Step 4: Handle approve/reject action
-  const handleStatusChange = async (id: string, status: Organization['status']) => {
+    loadOrganizations();
+  }, [token]);
+
+  const handleApprove = async (id: string) => {
     try {
-      await fetch(`http://localhost:4003/organizations/${id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ status }),
-      });
-
-      // Optimistically update local state
+      await approveOrganization(token!, id);
       setOrgs((prev) =>
-        prev.map((org) =>
-          org.id === id ? { ...org, status } : org
-        )
+        prev.map((org) => (org._id === id ? { ...org, approved: true } : org))
       );
     } catch (error) {
-      console.error('Error updating status:', error);
+      setError('Failed to approve organization');
+    }
+  };
+
+  const handleReject = async (id: string) => {
+    try {
+      await rejectOrganization(token!, id);
+      setOrgs((prev) => prev.filter((org) => org._id !== id));
+    } catch (error) {
+      setError('Failed to reject organization');
     }
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Organizations</h2>
-      <div className="grid grid-cols-1 gap-4">
+    <div className="org-container">
+      <h1>Organizations</h1>
+      {error && <p className="org-error">{error}</p>}
+
+      <div className="org-grid">
         {orgs.map((org) => (
-          <div key={org.id} className="bg-white p-4 shadow rounded">
-            <div className="flex justify-between">
-              <div>
-                <p className="text-lg font-semibold">{org.name} ({org.id})</p>
-                <p className="text-sm text-gray-600">{org.city}, {org.state}, {org.country}</p>
+          <div className="org-card" key={org._id}>
+            <h3>{org.name}</h3>
+            <p className="email">{org.email}</p>
+            <p className="date">Created: {new Date(org.createdAt).toLocaleDateString()}</p>
+
+            {!org.approved ? (
+              <div className="action-buttons">
+                <button onClick={() => handleApprove(org._id)} className="approve-btn">
+                  Approve
+                </button>
+                <button onClick={() => handleReject(org._id)} className="reject-btn">
+                  Reject
+                </button>
               </div>
-              <div className="flex items-center space-x-2">
-                {org.status === 'pending' ? (
-                  <>
-                    <button
-                      onClick={() => handleStatusChange(org.id, 'approved')}
-                      className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700"
-                    >
-                      Approve
-                    </button>
-                    <button
-                      onClick={() => handleStatusChange(org.id, 'rejected')}
-                      className="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700"
-                    >
-                      Reject
-                    </button>
-                  </>
-                ) : (
-                  <span className={`px-3 py-1 rounded text-white ${org.status === 'approved' ? 'bg-green-500' : 'bg-red-500'}`}>
-                    {org.status}
-                  </span>
-                )}
-              </div>
-            </div>
+            ) : (
+              <span className="approved-tag">Approved</span>
+            )}
           </div>
         ))}
       </div>

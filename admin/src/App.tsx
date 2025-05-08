@@ -1,10 +1,15 @@
+// App.tsx
+import ReactDOM from 'react-dom/client';
 import React from 'react';
-import  ReactDOM  from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
-import './index.css';
+import Login from './pages/Login';
+ 
+import './index.css'
 
+// The main App component where routing is defined
 const App = () => {
   return (
     <Router basename="/admin">

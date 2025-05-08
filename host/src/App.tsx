@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-// import './index.css';
+import './index.css';
 
 const AdminApp = React.lazy(() => import('admin/AdminApp'));
 const OrganizationApp = React.lazy(() => import('org/OrganizationApp'));
@@ -15,7 +15,7 @@ const App = () => {
       <Navbar />
 
       {/* Only wrap the route content in Suspense */}
-      <div className="min-h-screen p-4">
+      <div className="min-h-screen">
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/admin/*" element={<AdminApp />} />

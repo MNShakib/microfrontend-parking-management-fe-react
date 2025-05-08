@@ -1,0 +1,80 @@
+.add-org-container {
+    padding: 3rem;
+    background: linear-gradient(to bottom right, #2b6cb0, #2c5282);
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+  
+  .form-card {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .form-card h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .error {
+    text-align: center;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  form input {
+    display: block;
+    margin-top: 0.3rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  form input:focus {
+    border-color: #3182ce;
+  }
+  
+  .grid-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .grid-row label {
+    flex: 1;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    background-color: #3182ce;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2563eb;
+  }
+  
