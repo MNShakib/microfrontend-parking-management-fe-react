@@ -1,4 +1,4 @@
 import React from 'react';
-import '../styles/Organization.css';
+import './Organization.css';
 declare const Organizations: React.FC;
 export default Organizations;
