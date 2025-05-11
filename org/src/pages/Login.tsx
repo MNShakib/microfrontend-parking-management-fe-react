@@ -11,7 +11,7 @@ const Login: React.FC = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    const res = await fetch(`http://localhost:4001/organizations?orgId=${form.orgId}&password=${form.password}`);
+    const res = await fetch(`http://localhost:4010/organizations?orgId=${form.orgId}&password=${form.password}`);
     const data = await res.json();
     if (data.length > 0) navigate('/dashboard');
     else alert('Invalid credentials');

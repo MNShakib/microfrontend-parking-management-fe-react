@@ -6,7 +6,7 @@
     "build:dev": "cross-env NODE_ENV=development rspack build",
     "build:start": "cd dist && rspack serve",
     "start": "cross-env NODE_ENV=development rspack serve",
-    "mock-api": "json-server --watch db.json --port 4001"
+    "mock-api": "json-server --watch db.json --port 4010"
   },
   "devDependencies": {
     "@rspack/cli": "~1.2.0",

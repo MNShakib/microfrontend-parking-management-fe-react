@@ -8,13 +8,13 @@ const Levels: React.FC = () => {
   const [name, setName] = useState('');
 
   const fetchLevels = async () => {
-    const res = await fetch('http://localhost:4001/levels');
+    const res = await fetch('http://localhost:4010/levels');
     const data = await res.json();
     setLevels(data);
   };
 
   const addLevel = async () => {
-    await fetch('http://localhost:4001/levels', {
+    await fetch('http://localhost:4010/levels', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name })

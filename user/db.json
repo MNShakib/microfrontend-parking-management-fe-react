@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "userId": "user",
       "name": "John Doe",
       "email": "john@example.com",
@@ -24,6 +24,14 @@
       "password": "user44",
       "bikeNumber": "",
       "carNumber": "kl-1001"
+    },
+    {
+      "id": "9c93",
+      "userId": "test56",
+      "email": "test56@test.com",
+      "password": "test56",
+      "bikeNumber": "",
+      "carNumber": ""
     }
   ],
   "organizations": [
@@ -102,6 +110,11 @@
       "id": "user1",
       "userId": "user1",
       "balance": 100
+    },
+    {
+      "id": "test56",
+      "userId": "test56",
+      "balance": 0
     }
   ]
 }

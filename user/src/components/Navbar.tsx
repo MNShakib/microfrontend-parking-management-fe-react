@@ -1,15 +1,32 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Navbar.css';
 
-const Navbar = () => (
-    <nav className="bg-blue-700 text-white px-4 py-3 flex justify-between">
-        <div className="font-bold text-lg">Parking User Panel</div>
-        <div className="space-x-4">
-            <Link to="/user/dashboard/profile" className="block hover:text-blue-200">👤 My Profile</Link>
-            <Link to="/user/dashboard/book" className="block hover:text-blue-200">🚗 Book Slot</Link>
-            <Link to="/user/dashboard/wallet" className="block hover:text-blue-200">💰 Wallet</Link>
-            <Link to="/user/dashboard/history" className="block hover:text-blue-200">📜 Booking History</Link>
-        </div>
-    </nav>
-);
+const Navbar = () => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  return (
+    <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
+      <button className="toggle-btn" onClick={() => setCollapsed(!collapsed)}>
+        ☰
+      </button>
+      <div className="nav-brand">{collapsed ? '🚗' : '🚗 Parking'}</div>
+      <nav className="nav-links">
+        <Link to="/dashboard/profile" title="Profile">
+          👤 <span className="link-text">Profile</span>
+        </Link>
+        <Link to="/dashboard/book" title="Book Slot">
+          🅿️ <span className="link-text">Book</span>
+        </Link>
+        <Link to="/dashboard/wallet" title="Wallet">
+          💰 <span className="link-text">Wallet</span>
+        </Link>
+        <Link to="/dashboard/history" title="History">
+          📜 <span className="link-text">History</span>
+        </Link>
+      </nav>
+    </div>
+  );
+};
 
 export default Navbar;

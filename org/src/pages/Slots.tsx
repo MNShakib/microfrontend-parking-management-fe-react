@@ -11,13 +11,13 @@ const Slots: React.FC = () => {
   const [page, setPage] = useState(1);
 
   const fetchSlots = async () => {
-    const res = await fetch('http://localhost:4001/slots');
+    const res = await fetch('http://localhost:4010/slots');
     const data = await res.json();
     setSlots(data);
   };
 
   const fetchLevels = async () => {
-    const res = await fetch('http://localhost:4001/levels');
+    const res = await fetch('http://localhost:4010/levels');
     const data = await res.json();
     setLevels(data);
   };
@@ -33,7 +33,7 @@ const Slots: React.FC = () => {
     const levelLetter = getLevelLetterById(levelId);
     for (let i = 1; i <= count; i++) {
       const slotNumber = `${levelLetter}${currentMax + i}`;
-      await fetch('http://localhost:4001/slots', {
+      await fetch('http://localhost:4010/slots', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ levelId, type: slotType, booked: false, slotNumber })
@@ -48,7 +48,7 @@ const Slots: React.FC = () => {
       return;
     }
     const toDelete = slots.filter(s => s.levelId === levelId && s.type === slotType && !s.booked).slice(0, count);
-    await Promise.all(toDelete.map(s => fetch(`http://localhost:4001/slots/${s.id}`, { method: 'DELETE' })));
+    await Promise.all(toDelete.map(s => fetch(`http://localhost:4010/slots/${s.id}`, { method: 'DELETE' })));
     fetchSlots();
   };
 

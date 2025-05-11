@@ -1,0 +1,87 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: #1e40af;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  padding-top: 1rem;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: background 0.2s;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background-color: #3748b0;
+}
+
+.collapsed .link-text {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 0.5rem;
+  }
+
+  .collapsed {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .toggle-btn {
+    font-size: 1.25rem;
+  }
+}

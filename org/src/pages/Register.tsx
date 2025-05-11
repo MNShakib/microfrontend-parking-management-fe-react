@@ -15,7 +15,7 @@ const Register: React.FC = () => {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    await fetch('http://localhost:4001/organizations', {
+    await fetch('http://localhost:4010/organizations', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
