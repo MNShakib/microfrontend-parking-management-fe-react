@@ -56,7 +56,7 @@ const BookSlot: React.FC = () => {
 
   const handleBook = async (slot: Slot) => {
     const vehicleNumber = vehicleType === 'car' ? vehicleForm.carNumber : vehicleForm.bikeNumber;
-    const res = await fetch(`http://localhost:4004/api/bookings/book/${slot._id}`, {
+    const res = await fetch(`http://localhost:4001/api/user/book-slot/${slot._id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

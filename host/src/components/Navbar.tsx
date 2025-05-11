@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         <Link to="/">Home</Link>
         <Link to="/admin">Admin</Link>
         <Link to="/organization">Organization</Link>
-        <Link to="/user/register">User</Link>
+        <Link to="/user">User</Link>
       </div>
     </nav>
   );
