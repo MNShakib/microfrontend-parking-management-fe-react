@@ -1,3 +1,2 @@
-import React from 'react';
-declare const Login: React.FC;
+declare const Login: () => import("react/jsx-runtime").JSX.Element;
 export default Login;
